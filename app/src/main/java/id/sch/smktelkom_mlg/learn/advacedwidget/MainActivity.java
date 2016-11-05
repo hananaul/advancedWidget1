@@ -2,6 +2,7 @@ package id.sch.smktelkom_mlg.learn.advacedwidget;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,6 +58,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void addEditText(LinearLayout llMain) {
         for (int i = 1; i <= 5; i++) {
+            final EditText etNama = new EditText(this);
+            llMain.addView(etNama);
+            etNama.setHint("Isikan Nama Anak");
+
+            final EditText etUmur = new EditText(this);
+            llMain.addView(etUmur);
+            etUmur.setHint("Isikan Umur Anak");
+            etUmur.setInputType(InputType.TYPE_CLASS_NUMBER);
 
         }
     }
